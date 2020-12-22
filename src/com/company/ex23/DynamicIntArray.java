@@ -78,13 +78,21 @@ public class DynamicIntArray {
         return array;
     }
 
-    public void findindex(int element) {
+    public int[] findindex(int element) {
+        int[] indexArray=new int[array.length];
+        int k=0;
         for (int i = 0; i < array.length; i++) {
             if (element == array[i]) {
-                index = i;
+                indexArray[k] = i;
+                k++;
             }
         }
-        System.out.println("Index of "+array[index]+" is "+index);
+        /*for(int i=0;i<k+1;i++) {
+            if (indexArray[i] != 0) {
+                System.out.println(indexArray[i] + " ");
+            }
+        }*/
+        return indexArray;
     }
 
     public void print(){
